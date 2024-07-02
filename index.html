@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, user-scalable=no">
-		<title>flappy bird</title>
+		<title>Flappy bird</title>
 		<style>
 body {
 	touch-action: none;
@@ -12,12 +12,17 @@ body {
 	padding: 0;
 	text-align: center;
 	background-color: black;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
 }
 
 #canvas {
 	display: block;
 	margin: 0;
 	color: white;
+	height: 100vh !important; 
+	width: 36vw !important;
 }
 
 #canvas:focus {
@@ -62,6 +67,10 @@ body {
 @media only screen and (orientation:portrait) {
 	#status-progress {
 		width: 61.8%;
+	}
+
+	#canvas {
+		width: 100vw !important;
 	}
 }
 
@@ -136,7 +145,7 @@ body {
 
 		<script src="index.js"></script>
 		<script>
-const GODOT_CONFIG = {"args":[],"canvasResizePolicy":1,"ensureCrossOriginIsolationHeaders":true,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":41808,"index.wasm":42426310},"focusCanvas":true,"gdextensionLibs":[],"serviceWorker":"index.service.worker.js"};
+const GODOT_CONFIG = {"args":[],"canvasResizePolicy":1,"ensureCrossOriginIsolationHeaders":true,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":42048,"index.wasm":42426310},"focusCanvas":true,"gdextensionLibs":[],"serviceWorker":"index.service.worker.js"};
 const GODOT_THREADS_ENABLED = false;
 const engine = new Engine(GODOT_CONFIG);
 
