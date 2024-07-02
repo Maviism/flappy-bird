@@ -12,9 +12,6 @@ body {
 	padding: 0;
 	text-align: center;
 	background-color: black;
-	display: flex; 
-	flex-direction: row; 
-	justify-content: center;
 }
 
 #canvas {
@@ -112,15 +109,14 @@ body {
 	visibility: visible;
 }
 		</style>
-		
+		<link rel='manifest' href='index.manifest.json'>
+
 	</head>
 	<body>
-		<div class="container">
-			<canvas id="canvas">
-				HTML5 canvas appears to be unsupported in the current browser.<br >
-				Please try updating or use a different browser.
-			</canvas>
-		</div>
+		<canvas id="canvas">
+			HTML5 canvas appears to be unsupported in the current browser.<br >
+			Please try updating or use a different browser.
+		</canvas>
 		<div id="status">
 			<div id="status-progress" style="display: none;" oncontextmenu="event.preventDefault();">
 				<div id ="status-progress-inner"></div>
@@ -138,10 +134,10 @@ body {
 			<div id="status-notice" class="godot" style="display: none;"></div>
 		</div>
 
-		<script src="flappy-bird.js"></script>
+		<script src="index.js"></script>
 		<script>
-const GODOT_CONFIG = {"args":[],"canvasResizePolicy":1,"ensureCrossOriginIsolationHeaders":true,"executable":"flappy-bird","experimentalVK":false,"fileSizes":{"flappy-bird.pck":33760,"flappy-bird.wasm":47894344},"focusCanvas":true,"gdextensionLibs":[]};
-const GODOT_THREADS_ENABLED = true;
+const GODOT_CONFIG = {"args":[],"canvasResizePolicy":1,"ensureCrossOriginIsolationHeaders":true,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":41808,"index.wasm":42426310},"focusCanvas":true,"gdextensionLibs":[],"serviceWorker":"index.service.worker.js"};
+const GODOT_THREADS_ENABLED = false;
 const engine = new Engine(GODOT_CONFIG);
 
 (function () {
